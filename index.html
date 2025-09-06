@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nebula — Modern Tech Landing</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-Sl1r8WfA0x1+6yM8m9c3pVqf2f9H6l6T4p7cZbF5b3yq8oH1m5m0kFzQFJqH2Qm6mI6r0nWgYI8m9t7m0p4Ww==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span class="logo-dot"></span>
+        <span class="brand-text">Nebula</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="hamburger" aria-label="Open Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <h1 class="hero-title">Build Faster with <span class="gradient-text">Nebula</span></h1>
+      <p class="hero-tagline">A clean, responsive starter for modern startups and personal portfolios.</p>
+      <a href="#features" class="btn btn-primary">Get Started</a>
+    </div>
+    <div class="hero-bg-shapes" aria-hidden="true"></div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">What’s Inside</h2>
+      <p class="section-subtitle">Thoughtful defaults, accessible components, and delightful interactions.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon-wrap"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Performance</h3>
+          <p>Lightweight HTML & CSS with zero JS required for core experience.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-wrap"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Components</h3>
+          <p>Reusable, responsive cards and buttons with subtle hover effects.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-wrap"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>Responsive</h3>
+          <p>Mobile-first grid that adapts from single to multi-column layouts.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Accessible</h3>
+          <p>Semantic tags, clear contrast, and keyboard-friendly navigation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2 class="section-title">Designed to impress</h2>
+        <p>Use modern fonts, soft gradients, and smooth transitions to deliver a professional first impression.</p>
+        <a href="#contact" class="btn btn-ghost">Join Now</a>
+      </div>
+      <div class="about-visual" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#">
+          <span class="logo-dot"></span>
+          <span class="brand-text">Nebula</span>
+        </a>
+        <p class="footer-note">Crafted with HTML5 & CSS3 — no frameworks needed.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="mailto:hello@example.com">Contact</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>© <span id="year"></span> Nebula. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle (no external JS)
+    const btn = document.querySelector('.hamburger');
+    const list = document.querySelector('.nav-list');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.classList.toggle('active');
+      list.classList.toggle('active');
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
