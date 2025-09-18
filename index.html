@@ -2,233 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TechStart — Modern Landing Page</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
-
-  <style>
-    :root{
-      --bg:#0b0f19;
-      --panel:#111827;
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --brand:#7c3aed;
-      --brand-2:#06b6d4;
-      --accent:#a78bfa;
-      --ring: rgba(124,58,237,.35);
-      --radius:14px;
-      --shadow: 0 10px 30px rgba(2,6,23,.35);
-      --shadow-soft: 0 8px 24px rgba(2,6,23,.18);
-      --grad: linear-gradient(135deg, rgba(124,58,237,.9), rgba(6,182,212,.9));
-      --grad-soft: linear-gradient(135deg, #eef2ff, #ecfeff);
-    }
-    
-    *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; line-height:1.6; }
-    img{ max-width:100%; display:block; }
-    a{ color:inherit; text-decoration:none; }
-    
-    .container{ width:min(1100px, 92%); margin-inline:auto; }
-    
-    /* Header */
-    .site-header{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px); background:rgba(11,15,25,.6); border-bottom:1px solid rgba(255,255,255,.06); }
-    .header-inner{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 0; }
-    .brand{ display:inline-flex; align-items:center; gap:.55rem; font-weight:800; letter-spacing:.2px; }
-    .logo-dot{ width:14px; height:14px; border-radius:50%; background:var(--grad); box-shadow:0 0 0 6px rgba(124,58,237,.15); }
-    .brand-text{ font-family:Poppins, Inter, sans-serif; }
-    
-    .nav{ position:relative; }
-    .nav-list{ display:flex; gap:1rem; list-style:none; padding:0; margin:0; }
-    .nav-link{ padding:.55rem .8rem; border-radius:10px; color:var(--muted); transition:color .2s ease, background .2s ease; }
-    .nav-link:hover{ color:var(--text); background:rgba(255,255,255,.06); }
-    
-    /* Hamburger (mobile) */
-    .hamburger{ display:none; width:42px; height:42px; background:transparent; border:0; border-radius:10px; align-items:center; justify-content:center; cursor:pointer; }
-    .hamburger span{ display:block; width:22px; height:2px; background:#d1d5db; margin:4px 0; transition:.25s ease; }
-    .hamburger.active span:nth-child(1){ transform: translateY(6px) rotate(45deg); }
-    .hamburger.active span:nth-child(2){ opacity:0; }
-    .hamburger.active span:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
-    
-    /* Hero */
-    .hero{ position:relative; min-height:88vh; display:grid; place-items:center; text-align:center; background:radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.25), transparent 60%), radial-gradient(900px 500px at 120% 20%, rgba(6,182,212,.18), transparent 60%), linear-gradient(180deg, #0b0f19 0%, #0b0f19 65%, #0d1324 100%); overflow:hidden; }
-    .hero-inner{ padding:8rem 0 6rem; }
-    .hero-title{ font-size: clamp(2rem, 4vw + .8rem, 3.75rem); line-height:1.1; margin:0 0 1rem; font-weight:800; }
-    .gradient-text{ background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
-    .hero-tagline{ color:#cbd5e1; max-width:700px; margin-inline:auto; margin-bottom:1.5rem; }
-    .btn{ display:inline-block; padding:.9rem 1.2rem; border-radius:12px; font-weight:600; transition: transform .15s ease, box-shadow .15s ease, background .2s ease, color .2s ease; }
-    .btn-primary{ background:var(--grad); color:#0b0f19; box-shadow: 0 8px 24px rgba(124,58,237,.35); }
-    .btn-primary:hover{ transform: translateY(-1px); box-shadow: 0 14px 34px rgba(124,58,237,.45); }
-    .btn-ghost{ background:transparent; border:1px solid rgba(167,139,250,.35); color:#e9e9ff; }
-    .btn-ghost:hover{ background:rgba(167,139,250,.12); }
-    
-    .hero-bg-shapes::before,
-    .hero-bg-shapes::after{
-      content:"";
-      position:absolute; inset:auto;
-      width:520px; height:520px; border-radius:50%;
-      filter: blur(80px); opacity:.25; z-index:0;
-    }
-    .hero-bg-shapes::before{ background:var(--brand); top:10%; left:-10%; }
-    .hero-bg-shapes::after{ background:var(--brand-2); bottom:-10%; right:-6%; }
-    
-    /* Features */
-    .features{ padding:4.5rem 0; background:linear-gradient(180deg, #0d1324 0%, #0b0f19 100%); }
-    .section-title{ font-size: clamp(1.4rem, 1.6vw + .8rem, 2rem); margin:0 0 .25rem; }
-    .section-subtitle{ color:var(--muted); margin:0 0 2rem; }
-    .cards{ display:grid; grid-template-columns: repeat(4, 1fr); gap:1.2rem; }
-    .card{ background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding:1.25rem; box-shadow: var(--shadow-soft); transition: transform .18s ease, box-shadow .2s ease, border-color .2s ease; will-change: transform; }
-    .card:hover{ transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(124,58,237,.4); }
-    .icon-wrap{ width:44px; height:44px; border-radius:12px; display:grid; place-items:center; background:var(--grad-soft); color:#4c1d95; margin-bottom:.8rem; }
-    .card h3{ margin:.25rem 0 .4rem; font-size:1.05rem; }
-    .card p{ margin:0; color:#cdd3dc; font-size:.98rem; }
-    
-    /* About */
-    .about{ padding:4.5rem 0; }
-    .about-inner{ display:grid; grid-template-columns:1.2fr 1fr; gap:2rem; align-items:center; }
-    .about-visual{ min-height:280px; border-radius:20px; background: radial-gradient(500px 240px at 20% 10%, rgba(124,58,237,.35), transparent 40%), radial-gradient(420px 220px at 90% 90%, rgba(6,182,212,.28), transparent 45%), linear-gradient(135deg, #0f172a 0%, #0b1226 100%); border:1px solid rgba(255,255,255,.08); box-shadow: var(--shadow); }
-    
-    /* Footer */
-    .site-footer{ background:#0b0f19; border-top:1px solid rgba(255,255,255,.06); margin-top:2rem; }
-    .footer-inner{ display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; padding:2rem 0; }
-    .footer-note{ color:var(--muted); margin:.4rem 0 0; }
-    .footer-links{ display:flex; gap:1rem; flex-wrap:wrap; }
-    .footer-links a{ color:#cbd5e1; padding:.35rem .6rem; border-radius:10px; transition: background .2s ease, color .2s ease; }
-    .footer-links a:hover{ background:rgba(255,255,255,.06); color:#fff; }
-    .copyright{ border-top:1px solid rgba(255,255,255,.06); padding:1rem 0; color:#9aa1ad; text-align:center; }
-    
-    /* Responsive */
-    @media (max-width: 900px){
-      .cards{ grid-template-columns: repeat(2, 1fr); }
-      .about-inner{ grid-template-columns:1fr; }
-    }
-    @media (max-width: 680px){
-      .nav-list{ position: absolute; top: calc(100% + 10px); right:0; background: #0c1224; border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:.5rem; width: 200px; display:flex; flex-direction:column; gap:.25rem; box-shadow: var(--shadow); opacity:0; visibility:hidden; transform: translateY(-6px); transition: all .2s ease; }
-      .nav-list.active{ opacity:1; visibility:visible; transform: translateY(0); }
-      .hamburger{ display:inline-flex; }
-      .cards{ grid-template-columns: 1fr; }
-      .footer-inner{ flex-direction:column; }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name — web developer / designer." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">
-        <span class="logo-dot"></span>
-        <span class="brand-text">TechStart</span>
-      </a>
-
-      <nav class="nav" aria-label="Primary">
-        <button class="hamburger" aria-label="Open Menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-list">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
+      <a class="logo" href="#hero">MainCrafts</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">☰</button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="container hero-inner">
-      <h1 class="hero-title">Your Next Big Idea, <span class="gradient-text">Launched</span></h1>
-      <p class="hero-tagline">A modern, responsive template for startups and personal portfolios.</p>
-      <a href="#features" class="btn btn-primary">Get Started</a>
-    </div>
-    <div class="hero-bg-shapes" aria-hidden="true"></div>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 class="hero-title">Hi, I'm <span>Your Name</span></h1>
+          <p class="hero-sub">A Web Developer building modern, accessible, and animated user experiences.</p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="#projects">See Projects</a>
+            <a class="btn-ghost" href="mailto:hr@maincrafts.com">Hire Me</a>
+          </div>
+          <div class="socials">
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+          </div>
+        </div>
 
-  <!-- Features -->
-  <section id="features" class="features">
-    <div class="container">
-      <h2 class="section-title">Why Choose Us</h2>
-      <p class="section-subtitle">Clean design, responsive layouts, and delightful interactions.</p>
-
-      <div class="cards">
-        <article class="card">
-          <div class="icon-wrap"><i class="fa-solid fa-bolt"></i></div>
-          <h3>Fast</h3>
-          <p>Lightweight HTML5 & CSS3 with optimized performance.</p>
-        </article>
-
-        <article class="card">
-          <div class="icon-wrap"><i class="fa-solid fa-layer-group"></i></div>
-          <h3>Modular</h3>
-          <p>Reusable, responsive components with subtle hover effects.</p>
-        </article>
-
-        <article class="card">
-          <div class="icon-wrap"><i class="fa-solid fa-mobile-screen"></i></div>
-          <h3>Responsive</h3>
-          <p>Mobile-first grid that adapts seamlessly across devices.</p>
-        </article>
-
-        <article class="card">
-          <div class="icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
-          <h3>Secure</h3>
-          <p>Accessibility and best practices built into every section.</p>
-        </article>
+        <div class="hero-card" aria-hidden="false">
+          <div class="device">
+            <!-- a simple decorative card with animated shapes -->
+            <img src="https://via.placeholder.com/380x260.png?text=Your+Screenshot" alt="Project screenshot" />
+            <div class="float-shape shape-a"></div>
+            <div class="float-shape shape-b"></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="about">
-    <div class="container about-inner">
-      <div class="about-text">
-        <h2 class="section-title">Built to Impress</h2>
-        <p>Modern fonts, soft gradients, and smooth transitions deliver a professional first impression.</p>
-        <a href="#contact" class="btn btn-ghost">Join Now</a>
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About Me</h2>
+          <p>Short bio — who you are, what you build, tech stack, and what you're looking for.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Background</h3>
+            <p>I am a web developer with experience in HTML, CSS, JavaScript and frameworks. I enjoy building accessible UI and learning new web tech.</p>
+          </div>
+          <div class="about-card">
+            <h3>Skills</h3>
+            <ul class="skills-list">
+              <li>HTML & Semantic Markup</li>
+              <li>CSS (Flexbox, Grid, Animations)</li>
+              <li>JavaScript (ES6+)</li>
+              <li>React / Next.js basics</li>
+              <li>Git & GitHub</li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <h3>Tools</h3>
+            <p>VS Code · Chrome DevTools · Figma · GitHub Pages</p>
+          </div>
+        </div>
       </div>
-      <div class="about-visual" aria-hidden="true"></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="site-footer" id="contact">
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p>Selected projects — click to view or open the repo.</p>
+        </div>
+
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="ui">UI</button>
+          <button class="filter-btn" data-filter="js">JS</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project card (duplicate & edit for each project) -->
+          <article class="project-card" data-category="web js">
+            <img src="https://via.placeholder.com/600x360.png?text=Project+One" alt="Project One screenshot" />
+            <div class="project-body">
+              <h3>Project One</h3>
+              <p>Short description of project one — what it does and tech used.</p>
+              <div class="project-actions">
+                <a class="btn-sm" href="#" target="_blank" rel="noopener">Live</a>
+                <a class="btn-sm-outline" href="#" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ui">
+            <img src="https://via.placeholder.com/600x360.png?text=Project+Two" alt="Project Two screenshot" />
+            <div class="project-body">
+              <h3>Project Two</h3>
+              <p>Design-focused project — components, prototypes, Figma handoff.</p>
+              <div class="project-actions">
+                <a class="btn-sm" href="#" target="_blank" rel="noopener">Preview</a>
+                <a class="btn-sm-outline" href="#" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <img src="https://via.placeholder.com/600x360.png?text=Project+Three" alt="Project Three screenshot" />
+            <div class="project-body">
+              <h3>Project Three</h3>
+              <p>A full-stack demo with API integration and simple auth.</p>
+              <div class="project-actions">
+                <a class="btn-sm" href="#" target="_blank" rel="noopener">Live</a>
+                <a class="btn-sm-outline" href="#" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Get in touch — email or use the form below.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Say hello</h3>
+            <p>Email me at <a href="mailto:hr@maincrafts.com">hr@maincrafts.com</a></p>
+            <ul class="contact-meta">
+              <li><strong>Location:</strong> Your City, Country</li>
+              <li><strong>Availability:</strong> Open to work / internships</li>
+            </ul>
+          </div>
+
+          <form id="contactForm" class="contact-form" novalidate>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" id="name" required />
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" id="email" required />
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" id="message" rows="5" required></textarea>
+            </label>
+
+            <div class="form-row">
+              <button type="submit" class="btn-primary">Send Message</button>
+              <button type="reset" class="btn-ghost">Reset</button>
+            </div>
+
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <a class="brand" href="#home">
-          <span class="logo-dot"></span>
-          <span class="brand-text">TechStart</span>
-        </a>
-        <p class="footer-note">Crafted with HTML5 & CSS3 only.</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="mailto:hello@example.com">Contact</a>
-      </div>
-    </div>
-    <div class="container copyright">
-      <p>© <span id="year"></span> TechStart. All rights reserved.</p>
+      <p>© <span id="year"></span> Your Name · <a href="http://www.maincrafts.com/">maincrafts.com</a></p>
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    const btn = document.querySelector('.hamburger');
-    const list = document.querySelector('.nav-list');
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      btn.classList.toggle('active');
-      list.classList.toggle('active');
-    });
-
-    // Dynamic Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
