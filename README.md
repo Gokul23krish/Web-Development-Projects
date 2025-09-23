@@ -1,28 +1,34 @@
-# 🌟 Personal Portfolio Website
+# 🌟 Portfolio Website
 
-A modern, responsive portfolio website built with HTML5, CSS3, and JavaScript. Features smooth animations, mobile-first design, and optimized performance.
-
-![Portfolio Preview](https://via.placeholder.com/800x400/667eea/ffffff?text=Portfolio+Preview)
+Modern, responsive portfolio with dynamic navigation, form validation, and dark mode built with vanilla HTML, CSS, and JavaScript.
 
 ## ✨ Features
 
-- **Responsive Design**: Fully responsive across all devices and screen sizes
-- **Smooth Animations**: CSS animations and JavaScript scroll effects
-- **Modern UI/UX**: Clean, professional design with gradient backgrounds
-- **Interactive Elements**: Hover effects, form validation, and smooth scrolling
-- **Performance Optimized**: Lightweight and fast-loading
-- **Accessibility**: Keyboard navigation and semantic HTML
-- **Cross-Browser Compatible**: Works on all modern browsers
+- **Dynamic Navigation**: Background changes on scroll with active section highlighting
+- **Contact Form Validation**: Real-time validation with inline error messages
+- **Dark Mode Toggle**: Complete theme switching with localStorage persistence
+- **Responsive Design**: Mobile-first approach with hamburger navigation
+- **Smooth Animations**: CSS animations and optimized scroll effects
+- **Performance Optimized**: Throttled events for 60fps smooth scrolling
 
-## 🚀 Live Demo
+## 🛠️ Tech Stack
 
-Visit the live site: [Your Portfolio URL](https://yourusername.github.io/portfolio-website)
+- **HTML5**: Semantic markup with accessibility
+- **CSS3**: Custom properties, Grid, Flexbox, animations
+- **Vanilla JavaScript**: No frameworks, optimized performance
+- **Font Awesome**: Icons
+- **Google Fonts**: Poppins typography
 
-## 📱 Screenshots
+## 🚀 Quick Start
 
-### Desktop View
-![Desktop Screenshot](https://via.placeholder.com/600x400/3498db/ffffff?text=Desktop+View)
+1. **Start Local Server**
+   ```bash
+   python -m http.server 8080
+   # OR
+   npx live-server
+   ```
 
-### Mobile View
-![Mobile Screenshot](https://via.placeholder.com/300x600/9b59b6/ffffff?text=Mobile+View)
+2. **Open Browser**: Navigate to `http://localhost:8080`
+
+⭐ **V.Gokul Portfolio** | Built with HTML, CSS & JavaScript
 

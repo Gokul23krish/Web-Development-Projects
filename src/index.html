@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V.Gokul- Portfolio</title>
+    <title>V.Gokul - Portfolio</title>
     <meta name="description" content="Personal portfolio showcasing web development projects and skills">
     
     <!-- Font Awesome for icons -->
@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -24,7 +24,7 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link active">Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="#about" class="nav-link">About</a>
@@ -36,6 +36,10 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
+            <!-- Dark Mode Toggle Button -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -293,24 +297,29 @@
                     </div>
                 </div>
                 
-                <form class="contact-form fade-in" id="contactForm">
+                <form class="contact-form fade-in" id="contactForm" novalidate>
                     <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">V.Gokul</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                        <label for="name">Your Name</label>
+                        <div class="error-message" id="nameError"></div>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email"></label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        <label for="email">Your Email</label>
+                        <div class="error-message" id="emailError"></div>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
                         <label for="subject">Subject</label>
+                        <div class="error-message" id="subjectError"></div>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message">SUpppppp!!!!!</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        <label for="message">Your Message</label>
+                        <div class="error-message" id="messageError"></div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+                    <div class="success-message" id="successMessage">Message sent successfully! I'll get back to you soon.</div>
                 </form>
             </div>
         </div>
@@ -327,6 +336,6 @@
     </footer>
 
     <!-- Custom JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
