@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Cascade Blog</title>
+  <meta name="description" content="Contact the Cascade Blog for feedback, ideas, or collaboration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Cascade Blog Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Cascade Blog</span>
+      </a>
+      <nav class="nav-links" id="primaryNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Contact</h1>
+        <p>Have feedback or ideas? Send a quick message below.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="contact-form-title">
+      <h2 id="contact-form-title" class="sr-only">Contact form</h2>
+      <form id="contactForm" class="form" novalidate>
+        <div>
+          <label for="name">Name</label>
+          <input class="input" type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input class="input" type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea class="textarea" id="message" name="message" placeholder="How can we help?" required></textarea>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <button class="button" type="submit">Send Message</button>
+          <span id="formStatus" aria-live="polite" style="display:none; color:#9ca3af;"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 Cascade. Built for the Front‑End Multi‑Page Blog Task.
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

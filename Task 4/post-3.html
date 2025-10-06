@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Building Responsive Grids with Modern CSS — Cascade Blog</title>
+  <meta name="description" content="Practical approaches to content‑driven, responsive grids using CSS Grid." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Cascade Blog Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Cascade Blog</span>
+      </a>
+      <nav class="nav-links" id="primaryNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="article">
+    <div class="container">
+      <a class="back-link" href="blog.html">← Back to Blog</a>
+      <header class="post-header">
+        <h1>Building Responsive Grids with Modern CSS</h1>
+        <div class="post-meta">September 5, 2025 · 8 min read</div>
+      </header>
+    </div>
+
+    <img class="hero-img" src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=1600&q=60" alt="Grid layout sketches on a notebook" />
+
+    <div class="container content">
+      <p>CSS Grid enables two‑dimensional layout with a clarity that Flexbox can’t match. The key is to embrace content‑driven sizing and let the browser do the heavy lifting.</p>
+
+      <h2>Auto‑fit + minmax</h2>
+      <p>A classic responsive pattern uses <code>grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))</code>. It creates as many columns as will fit while maintaining a minimum card width. The result: a layout that adapts without breakpoints.</p>
+
+      <h2>Named areas for structure</h2>
+      <p>For more complex pages, define named grid areas for header, sidebar, main, and footer. This makes your layout readable and refactor‑friendly.</p>
+
+      <h3>Progressive enhancement</h3>
+      <p>Start with a simple linear flow that works everywhere, then layer Grid enhancements. This ensures older browsers still see a usable page while modern browsers get an elevated experience.</p>
+
+      <p>With a few patterns like these, you’ll build robust, flexible layouts that serve content well across devices.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 Cascade. Built for the Front‑End Multi‑Page Blog Task.
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

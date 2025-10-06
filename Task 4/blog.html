@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Posts — Cascade Blog</title>
+  <meta name="description" content="Browse all posts on the Cascade Blog, focused on modern front‑end design and development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Cascade Blog Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Cascade Blog</span>
+      </a>
+      <nav class="nav-links" id="primaryNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="all-posts-title">
+      <div class="hero-card">
+        <h1 id="all-posts-title">All Posts</h1>
+        <p>Deep dives into layout, typography and the craft of building readable, responsive front‑ends.</p>
+      </div>
+      <div class="search-bar">
+        <label for="searchInput" class="sr-only">Search posts by title</label>
+        <input id="searchInput" class="search-input" type="search" placeholder="Search posts by title…" autocomplete="off" />
+      </div>
+      <p id="noResults" class="no-results">No posts match your search.</p>
+    </section>
+
+    <section aria-labelledby="posts-grid-title">
+      <h2 id="posts-grid-title" class="sr-only">Posts</h2>
+      <div class="post-grid">
+        <article class="post-card">
+          <img class="post-thumb" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60" alt="Developer workspace with code on screen" />
+          <div class="post-body">
+            <div class="post-meta">October 6, 2025</div>
+            <h3 class="post-title">Designing with Flexbox: Practical Patterns</h3>
+            <p class="post-desc">A collection of real‑world, composable Flexbox patterns that scale from cards to full layouts.</p>
+            <a class="read-more" href="post-1.html">Read more</a>
+          </div>
+        </article>
+        <article class="post-card">
+          <img class="post-thumb" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=60" alt="Laptop with design elements and typography" />
+          <div class="post-body">
+            <div class="post-meta">September 22, 2025</div>
+            <h3 class="post-title">Typography That Works: Scales and Rhythm</h3>
+            <p class="post-desc">Use modular scales, measure, and vertical rhythm to make content scannable and pleasant to read.</p>
+            <a class="read-more" href="post-2.html">Read more</a>
+          </div>
+        </article>
+        <article class="post-card">
+          <img class="post-thumb" src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=1200&q=60" alt="Grid layout sketches on a notebook" />
+          <div class="post-body">
+            <div class="post-meta">September 5, 2025</div>
+            <h3 class="post-title">Building Responsive Grids with Modern CSS</h3>
+            <p class="post-desc">From simple two‑column to dynamic, content‑driven grids using minmax and auto‑fit.</p>
+            <a class="read-more" href="post-3.html">Read more</a>
+          </div>
+        </article>
+        <article class="post-card">
+          <img class="post-thumb" src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&w=1200&q=60" alt="Reader on mobile device" />
+          <div class="post-body">
+            <div class="post-meta">August 27, 2025</div>
+            <h3 class="post-title">Writing Readable Content for the Web</h3>
+            <p class="post-desc">Practical tips for headings, paragraph width, spacing and hierarchy that improve comprehension.</p>
+            <a class="read-more" href="post-4.html">Read more</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 Cascade. Built for the Front‑End Multi‑Page Blog Task.
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
