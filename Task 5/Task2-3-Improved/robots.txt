@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.maincrafts.com/task2-3/sitemap.xml
