@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V.Gokul – Portfolio</title>
+  <meta name="description" content="Personal portfolio showcasing web development projects and skills.">
+  <meta name="theme-color" content="#111827">
+  <link rel="canonical" href="https://www.maincrafts.com/task2-3/">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="V.Gokul – Portfolio">
+  <meta property="og:description" content="Projects, skills, and contact information.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.maincrafts.com/task2-3/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=1600&q=60">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Fonts / Icons preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- External fonts and icons (same as original) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Use original CSS to preserve design -->
+  <link rel="stylesheet" href="../../Task 2 &amp; 3/style.css">
+
+  <!-- A11y helpers -->
+  <style>
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:8px;top:8px;width:auto;height:auto;z-index:1001;background:#111827;color:#fff;padding:8px 12px;border-radius:8px}
+    :focus-visible{outline:3px solid #22d3ee;outline-offset:2px}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header / Navigation -->
+  <header role="banner">
+    <nav class="navbar" role="navigation" aria-label="Primary">
+      <div class="nav-container">
+        <div class="nav-logo"><a href="#home" aria-label="Portfolio home">Portfolio</a></div>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#home" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+        <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title fade-in">Hi, I'm <span class="highlight">V.Gokul</span></h1>
+          <p class="hero-tagline fade-in">Full-Stack Developer &amp; Creative Problem Solver</p>
+          <p class="hero-description fade-in">I create beautiful and functional web experiences that make a difference.</p>
+          <div class="hero-buttons fade-in">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-image fade-in">
+          <div class="hero-img-placeholder" role="img" aria-label="Profile placeholder icon">
+            <i class="fas fa-user-circle" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section-title fade-in">About Me</h2>
+        <div class="about-content">
+          <div class="about-text fade-in">
+            <p>I'm a passionate web developer with a love for creating innovative digital solutions. With experience in both front-end and back-end technologies, I enjoy bringing ideas to life through clean, efficient code.</p>
+            <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while brainstorming the next big idea.</p>
+            <div class="skills">
+              <h3>Technologies I Work With:</h3>
+              <div class="skills-grid" role="list">
+                <div class="skill-item" role="listitem"><i class="fab fa-html5" aria-hidden="true"></i><span>HTML5</span></div>
+                <div class="skill-item" role="listitem"><i class="fab fa-css3-alt" aria-hidden="true"></i><span>CSS3</span></div>
+                <div class="skill-item" role="listitem"><i class="fab fa-js-square" aria-hidden="true"></i><span>JavaScript</span></div>
+                <div class="skill-item" role="listitem"><i class="fab fa-react" aria-hidden="true"></i><span>React</span></div>
+                <div class="skill-item" role="listitem"><i class="fab fa-node-js" aria-hidden="true"></i><span>Node.js</span></div>
+                <div class="skill-item" role="listitem"><i class="fab fa-git-alt" aria-hidden="true"></i><span>Git</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="about-stats fade-in">
+            <div class="stat-item"><div class="stat-number">15+</div><div class="stat-label">Projects Completed</div></div>
+            <div class="stat-item"><div class="stat-number">2+</div><div class="stat-label">Years Experience</div></div>
+            <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">Happy Clients</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" class="section-title fade-in">My Projects</h2>
+        <p class="section-subtitle fade-in">Here are some of my recent works</p>
+        <div class="projects-grid">
+          <!-- Project cards copied from original; icons used as placeholders -->
+          <div class="project-card fade-in">
+            <div class="project-image">
+              <div class="project-img-placeholder" role="img" aria-label="E-Commerce Website placeholder"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
+              <div class="project-overlay"><div class="project-links"><a href="#" class="project-link" target="_blank" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a><a href="#" class="project-link" target="_blank" aria-label="Source code"><i class="fab fa-github"></i></a></div></div>
+            </div>
+            <div class="project-content"><h3 class="project-title">E-Commerce Website</h3><p class="project-description">A fully responsive e-commerce platform built with React and Node.js. Features include user authentication, shopping cart, and payment integration.</p><div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Stripe API</span></div></div>
+          </div>
+          <div class="project-card fade-in">
+            <div class="project-image">
+              <div class="project-img-placeholder" role="img" aria-label="Task Management App placeholder"><i class="fas fa-mobile-alt" aria-hidden="true"></i></div>
+              <div class="project-overlay"><div class="project-links"><a href="#" class="project-link" target="_blank" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a><a href="#" class="project-link" target="_blank" aria-label="Source code"><i class="fab fa-github"></i></a></div></div>
+            </div>
+            <div class="project-content"><h3 class="project-title">Task Management App</h3><p class="project-description">A productivity app that helps users organize tasks and track progress. Built with vanilla JavaScript and features drag-and-drop functionality.</p><div class="project-tech"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Local Storage</span></div></div>
+          </div>
+          <div class="project-card fade-in">
+            <div class="project-image">
+              <div class="project-img-placeholder" role="img" aria-label="Data Visualization Dashboard placeholder"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+              <div class="project-overlay"><div class="project-links"><a href="#" class="project-link" target="_blank" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a><a href="#" class="project-link" target="_blank" aria-label="Source code"><i class="fab fa-github"></i></a></div></div>
+            </div>
+            <div class="project-content"><h3 class="project-title">Data Visualization Dashboard</h3><p class="project-description">An interactive dashboard for visualizing complex data sets. Features real-time updates and multiple chart types for comprehensive analysis.</p><div class="project-tech"><span class="tech-tag">D3.js</span><span class="tech-tag">React</span><span class="tech-tag">Express</span><span class="tech-tag">PostgreSQL</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title fade-in">Let's Work Together</h2>
+        <p class="section-subtitle fade-in">Have a project in mind? I'd love to hear from you!</p>
+        <div class="contact-content">
+          <div class="contact-info fade-in">
+            <h3>Get in Touch</h3>
+            <div class="contact-item"><i class="fas fa-envelope" aria-hidden="true"></i><div><h4>Email</h4><p>your.email@example.com</p></div></div>
+            <div class="contact-item"><i class="fas fa-phone" aria-hidden="true"></i><div><h4>Phone</h4><p>0000000000</p></div></div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><div><h4>Location</h4><p>Chittoor, India</p></div></div>
+            <div class="social-links">
+              <a href="#" class="social-link" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-link" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <form class="contact-form fade-in" id="contactForm" novalidate>
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Full Name" required aria-required="true" autocomplete="name">
+              <label for="name">Your Name</label>
+              <div class="error-message" id="nameError" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-required="true" autocomplete="email">
+              <label for="email">Your Email</label>
+              <div class="error-message" id="emailError" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject of your message" required aria-required="true">
+              <label for="subject">Subject</label>
+              <div class="error-message" id="subjectError" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required aria-required="true"></textarea>
+              <label for="message">Your Message</label>
+              <div class="error-message" id="messageError" aria-live="polite"></div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+            <div class="success-message" id="successMessage" role="status">Message sent successfully! I'll get back to you soon.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container"><div class="footer-content"><p>&copy; 2024 V.Gokul. All rights reserved.</p><p>Built with ❤️ using HTML, CSS &amp; JavaScript</p></div></div>
+  </footer>
+
+  <!-- Use original JS but defer to avoid blocking rendering -->
+  <script src="../../Task 2 &amp; 3/script.js" defer></script>
+</body>
+</html>
